@@ -3,6 +3,7 @@ import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
 import parserVue from 'vue-eslint-parser';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
 const vueRules = {
   'vue/block-lang': [2, { script: { lang: 'ts' }, style: { allowNoLang: true } }],
@@ -96,6 +97,8 @@ export default [
   ...tseslint.configs.recommended,
   // vue3 基础推荐规则
   ...pluginVue.configs['flat/recommended'],
+  // 默认推荐规则
+  eslintConfigPrettier,
   {
     files: ['**/*.vue'],
     ignores: ['**/*.config.js'],

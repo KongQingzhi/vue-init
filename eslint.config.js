@@ -116,12 +116,13 @@ export default [
     },
     rules: {
       ...vueRules,
+      'no-console': 'error',
     },
   },
   {
     files: ['**/*.ts'],
     rules: {
-      // 'no-console': 'error',
+      'no-console': 'error',
     },
   },
 ];

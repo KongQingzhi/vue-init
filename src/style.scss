@@ -1,24 +1,20 @@
+@import url('./style/index');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--color-primary);
-  color-scheme: light dark;
-  background-color: var(--bg-color);
-  font-synthesis: none;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: $--color-primary;
+  background-color: $--bg-color;
 }
 
 a {
   font-weight: 500;
-  color: var(--color-primary);
-  text-decoration: inherit;
+  color: $--color-primary;
+  text-decoration: inherit
 }
 
 a:hover {
-  color: var(--color-primary-hover);
+  color: $--color-primary-hover;
 }
 
 body {
@@ -40,7 +36,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   cursor: pointer;
-  background-color: var(--font-section-color);
+  background-color: $--font-section-color;
   border: 1px solid transparent;
   border-radius: 8px;
   transition: border-color 0.25s;

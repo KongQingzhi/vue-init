@@ -10,13 +10,19 @@
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the
-    official Vue + Vite starter
+    <a
+      href="https://vuejs.org/guide/quick-start.html#local"
+      target="_blank"
+      rel="noopener noreferrer"
+      >create-vue</a
+    >, the official Vue + Vite starter
   </p>
 
   <p>
     Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
+    <a href="https://github.com/vuejs/language-tools" target="_blank" rel="noopener noreferrer"
+      >Volar</a
+    >
     in your IDE for a better DX
   </p>
 
@@ -24,33 +30,34 @@
 
   <form>
     主题切换:
-
     <input
-      id="light"
+      id="default"
       v-model="type"
       type="radio"
-      name="gender"
-      value="light"
-      checked
+      name="theme"
+      value="default"
       @change="onChange"
     />
 
-    <label for="light">light</label>
+    <label for="default">default</label>
 
-    <input id="dark" v-model="type" type="radio" name="gender" value="dark" @change="onChange" />
+    <input id="orange" v-model="type" type="radio" name="theme" value="orange" @change="onChange" />
 
-    <label for="dark">dark</label>
+    <label for="orange">orange</label>
+
+    <input id="red" v-model="type" type="radio" name="theme" value="red" @change="onChange" />
+
+    <label for="red">red</label>
   </form>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
-defineProps<{ msg: string }>();
-
 const count = ref(0);
-const type = ref('light');
+const type = ref(localStorage.getItem('theme') ?? 'default');
 function onChange() {
-  document.documentElement.setAttribute('prefers-color-scheme', type.value);
+  localStorage.setItem('theme', type.value);
+  document.documentElement.setAttribute('data-theme', type.value);
 }
 </script>

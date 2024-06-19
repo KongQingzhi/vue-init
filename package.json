@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.24.5",
-    "sass": "^1.77.0",
     "vue": "^3.4.21",
     "vue-eslint-parser": "^9.4.2"
   },
@@ -32,6 +31,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "sass": "^1.77.0",
     "stylelint": "^16.5.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-prettier": "^9.0.5",

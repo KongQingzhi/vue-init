@@ -1,0 +1,8 @@
+@import url("./theme-default");
+@import url("./theme-orange");
+@import url("./theme-red");
+
+$--bg-color: var(--bg-color) !default;
+$--color-primary:var(--color-primary) !default;
+$--color-primary-hover:var(--color-primary-hover) !default;
+$--font-section-color:var(--font-section-color) !default;
